@@ -17,10 +17,11 @@ type CmdFlags struct {
 }
 
 var FlagUsage = struct {
-	Add  string
-	Del  string
-	Edit string
-	List string
+	Add     string
+	Del     string
+	Edit    string
+	List    string
+	Version string
 }{
 	Add: `
 Add a new Apps Script file location:
@@ -55,6 +56,7 @@ Edit existing Apps Script file locaiton information:
 	List: `
 Lists all connected file locations
   `,
+	Version: version,
 }
 
 func NewCmdFlags() *CmdFlags {
