@@ -1,7 +1,7 @@
 package main
 
 var (
-	version              = "v1.0.0"
+	version              = "v0.1.1"
 	claspName            = "clasp"
 	claspJsonFileName    = ".clasp.json"
 	claspallJsonFileName = ".claspall.json"

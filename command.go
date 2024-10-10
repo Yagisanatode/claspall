@@ -27,27 +27,27 @@ var FlagUsage = struct {
 	Add: `
 Add a new Apps Script file location:
 - [how] Between quotation marks add a name or title then 
-    a colon (:) an the file id. Close quotation marks.
-- [syntax] -add "title:Apps-Script-File-Id"
+    a colon (:) and the file id. Close quotation marks.
+- [syntax] claspall -add "title:Apps-Script-File-Id"
 - [example] 
     claspall -add "Prod:1_hg5Lj-lOXbZMm60FizXSEZBmYN27-ozK-JOX4fRmEWntroxQ"
 - [more]
 -- You might consider having a "Test" project and a "Production" project AppsScirpt file
--- You can find the project id in the 'Project Settings' > 'IDs' section.
+-- You can find the project ID in the 'Project Settings' > 'IDs' section.
 -- Don't include the current project you are working in. This will be your 'Dev' file.
   `,
 	Del: `
 Delete an Apps Script file location:
-- [how] Select a Apps Script file reference to delete by number from the -list.
+- [how] Select an Apps Script file reference to delete by number from the -list.
 - [syntax] claspall -del Number
 - [example] 
     claspall -del 1
 - [more]
 -- You can use the -list flag to get the selected file location to remove
--- This will not delete the file. It will stop the delete file from being updated from the core file.
+-- This will not delete the file. It will stop the deleted file from being updated from the core file.
     `,
 	Edit: `
-Edit existing Apps Script file locaiton information:
+Edit existing Apps Script file location information:
 - [how] Select an Apps Script file reference from the list and update the title and/or file id.
 - [syntax] claspall -edit id:title:Apps-Script-File-Id
 - [example] 
@@ -57,10 +57,10 @@ Edit existing Apps Script file locaiton information:
 --- Leave out the id after the first colon.
 -- To edit just the Apps Script File ID: 
     "1::1_hg5Lj-lOXbZMm60FizXSEZBmYN27-ozK-JOX4fRmEWntroxQ"
---- Leave out the name between the id and the Apps Script File ID colon separators.
+--- Leave out the name between the ID and the Apps Script File ID colon separators.
     `,
 	List: `
-Lists all connected file locatis
+Lists all connected file locations
     `,
 	Version: version,
 }
