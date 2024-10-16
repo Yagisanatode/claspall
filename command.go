@@ -92,7 +92,7 @@ func (cf CmdFlags) Execute(files *Files) {
 	case cf.Add != "":
 		parts := strings.SplitN(cf.Add, ":", 2)
 		if len(parts) != 2 {
-			fmt.Println("Error, invalid format for Add.")
+			fmt.Println("💥 Error, invalid format for Add.")
 			fmt.Print(FlagUsage.Add)
 			os.Exit(1)
 		}
@@ -101,15 +101,15 @@ func (cf CmdFlags) Execute(files *Files) {
 
 	case cf.Edit != "":
 		parts := strings.SplitN(cf.Edit, ":", 3)
-		if len(parts) != 2 {
-			fmt.Println("Error, invalid format for Edit.")
+		if len(parts) != 3 {
+			fmt.Println("💥 Error, invalid format for Edit.")
 			fmt.Print(FlagUsage.Edit)
 			os.Exit(1)
 		}
 
 		line, err := strconv.Atoi(parts[0])
 		if err != nil {
-			fmt.Println("Error, invalid line number to edit")
+			fmt.Println("💥 Error, invalid line number to edit")
 			fmt.Print(FlagUsage.Edit)
 			os.Exit(1)
 		}

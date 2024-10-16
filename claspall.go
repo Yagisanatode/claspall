@@ -25,9 +25,9 @@ func (files *Files) add(name string, id string) {
 }
 
 func (files *Files) validateIndex(index int) error {
-	fmt.Println("validate index")
+	fmt.Println("validating index")
 	if index < 0 || index > len(*files) {
-		err := errors.New("Error: Invalid index")
+		err := errors.New("💥 Error: Invalid index")
 		log.Fatalln(err)
 	}
 	return nil
@@ -40,8 +40,8 @@ func (files *Files) delete(num int) error {
 	if err := f.validateIndex(idx); err != nil {
 		return err
 	}
-	// TODO There must be a better way to update files.
-	*files = append(f[:idx], f[:idx+1]...)
+
+	*files = append(f[:idx], f[idx+1:]...)
 
 	return nil
 }
